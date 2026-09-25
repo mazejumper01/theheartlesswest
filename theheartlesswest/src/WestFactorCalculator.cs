@@ -4,7 +4,7 @@ using Vintagestory.API.Server;
 
 
 
-namespace OutWest;
+namespace TheHeartlessWest;
 
 public class WestFactorCalculator : ModSystem
 

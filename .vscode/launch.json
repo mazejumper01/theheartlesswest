@@ -21,9 +21,9 @@
                 // "--openWorld" , "modding test world",
                 "--tracelog",
                 "--addModPath",
-                "${workspaceFolder}/OutWest/bin/Debug/Mods",
+                "${workspaceFolder}/TheHeartlessWest/bin/Debug/Mods",
                 "--addOrigin",
-                "${workspaceFolder}/OutWest/assets"
+                "${workspaceFolder}/TheHeartlessWest/assets"
             ],
             "console": "internalConsole",
             "stopAtEntry": false
@@ -43,9 +43,9 @@
             "args": [
                 "--tracelog",
                 "--addModPath",
-                "${workspaceFolder}/OutWest/bin/Debug/Mods",
+                "${workspaceFolder}/TheHeartlessWest/bin/Debug/Mods",
                  "--addOrigin",
-                 "${workspaceFolder}/OutWest/assets"
+                 "${workspaceFolder}/TheHeartlessWest/assets"
             ],
             "console": "internalConsole",
             "stopAtEntry": false

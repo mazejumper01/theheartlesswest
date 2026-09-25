@@ -3,9 +3,9 @@ using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 
 
-namespace OutWest;
+namespace TheHeartlessWest;
 
-public class OutWestCommand : ModSystem
+public class THWCommand : ModSystem
 {
     
     
@@ -18,7 +18,7 @@ public override void StartServerSide(ICoreServerAPI api)
             
 
           base.StartServerSide(api);
-            api.ChatCommands.Create("owc")
+            api.ChatCommands.Create("thwclimate")
             .WithDescription("tells you your west factor")
             .RequiresPrivilege(Privilege.chat)
             .RequiresPlayer()
