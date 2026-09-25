@@ -18,6 +18,7 @@ public class OutWestModSystem : ModSystem
             float result = WestFactorCalculator.CalculateWestFactor(250, 1000);
 
             api.Logger.Notification("Out West test result: " + result);
+            
         }
 
         public override void StartClientSide(ICoreClientAPI api)

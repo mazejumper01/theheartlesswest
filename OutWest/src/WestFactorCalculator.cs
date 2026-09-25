@@ -3,17 +3,20 @@ using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 
 
+
 namespace OutWest;
 
-public class WestFactorCalculator
-{
-    public static float CalculateWestFactor(int x, int mapSizeX)
-    {
-       int worldCenterX = mapSizeX / 2;
+public class WestFactorCalculator : ModSystem
 
-       if (x < worldCenterX)
+{
+    
+    public static float CalculateWestFactor(int playerPosX, int worldSizeX)
+    {
+       int worldCenterX = worldSizeX / 2;
+
+       if (playerPosX < worldCenterX)
        {
-        return (worldCenterX - x) / (float)worldCenterX;
+        return (worldCenterX - playerPosX) / (float)worldCenterX;
        }else
          {
             
@@ -22,6 +25,7 @@ public class WestFactorCalculator
 
         
     }
+    
     
 
 }

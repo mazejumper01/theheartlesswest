@@ -10,7 +10,13 @@ public class OutWestCommand : ModSystem
     
     
 public override void StartServerSide(ICoreServerAPI api)
+
+        
     {
+        int worldSizeX = api.WorldManager.MapSizeX;
+
+            
+
           base.StartServerSide(api);
             api.ChatCommands.Create("owc")
             .WithDescription("tells you your west factor")
@@ -18,10 +24,16 @@ public override void StartServerSide(ICoreServerAPI api)
             .RequiresPlayer()
             .HandleWith((args) =>
              {
-                
-                 return TextCommandResult.Success("your west factor is");
+                var playerPosX = args.Caller.Entity.Pos.AsBlockPos.X;
+                var calculateWestFactor = WestFactorCalculator.CalculateWestFactor(playerPosX, worldSizeX);
+                 return TextCommandResult.Success("your west factor is " + calculateWestFactor.ToString("F3"));
              });
+
+             
+
     }
+
+    
 
 
 }
