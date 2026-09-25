@@ -15,7 +15,9 @@ public class OutWestModSystem : ModSystem
 
         public override void StartServerSide(ICoreServerAPI api)
         {
-            Mod.Logger.Notification("Hello from outwest mod server side");
+            float result = WestFactorCalculator.CalculateWestFactor(250, 1000);
+
+            api.Logger.Notification("Out West test result: " + result);
         }
 
         public override void StartClientSide(ICoreClientAPI api)
