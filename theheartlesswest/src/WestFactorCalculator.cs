@@ -7,13 +7,13 @@ public class WestFactorCalculator : ModSystem
 
 {
     
-    public static float CalculateWestFactor(int playerPosX, int worldSizeX)
+    public static float CalculateWestFactor(int x, int worldSizeX)
     {
        int worldCenterX = worldSizeX / 2;
 
-       if (playerPosX < worldCenterX)
+       if (x < worldCenterX)
        {
-        return (worldCenterX - playerPosX) / (float)worldCenterX;
+        return (worldCenterX - x) / (float)worldCenterX;
        }else
          {
             

@@ -1,6 +1,4 @@
 using Vintagestory.API.Common;
-using Vintagestory.API.Client;
-using Vintagestory.API.Config;
 using Vintagestory.API.Server;
 using Vintagestory.API.Datastructures;
 
@@ -25,20 +23,20 @@ public class THWWorldgen : ModSystem
 
         }
 
-        public void OnMapRegionGeneration(IMapRegion mapRegion, int regionX, int regionZ, ITreeAttribute chunkGenParams)
+        private void OnMapRegionGeneration(IMapRegion mapRegion, int regionX, int regionZ, ITreeAttribute chunkGenParams)
         {
 
                 int regionSize = serverApi.WorldManager.RegionSize;
+
+                int mapSizeX = serverApi.WorldManager.MapSizeX;
 
                 int regionStartX = regionX * regionSize;
 
                 int regionCenterX = regionStartX + regionSize / 2;
 
-            serverApi.Logger.Notification(regionX + " " + regionSize + " " + regionStartX + " " + regionCenterX);
+                float westFactor = WestFactorCalculator.CalculateWestFactor(regionCenterX, mapSizeX);
 
-
-                
-                        
+                serverApi.Logger.Notification(westFactor.ToString("F6") + " west factor for region at X: " + regionCenterX);
                 }
             
 
