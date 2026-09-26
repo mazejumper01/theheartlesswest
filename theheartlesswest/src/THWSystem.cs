@@ -18,6 +18,8 @@ public class THWSystem : ModSystem
             float result = WestFactorCalculator.CalculateWestFactor(250, 1000);
 
             api.Logger.Notification("The Heartless West test result: " + result);
+
+            
             
         }
 
